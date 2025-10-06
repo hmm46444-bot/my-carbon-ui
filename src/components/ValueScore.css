@@ -1,0 +1,40 @@
+.value-score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.gauge-wrapper {
+  width: 200px;
+  height: 100px;      /* half of gauge height */
+  overflow: hidden;   /* hide bottom half */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* push semicircle upwards */
+  margin-bottom: -20px;  /* adjust to close gap with button */
+}
+
+#value-gauge {
+  transform: rotate(0deg); /* keep gauge orientation */
+}
+
+#value-gauge circle {
+  display: none; /* hides the black needle hub circle */
+}
+
+.value-score-btn {
+  margin-top: 0; /* remove extra space */
+  background-color: #a87c32;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.value-score-btn:hover {
+  background-color: #8a6528;
+}

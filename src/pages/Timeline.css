@@ -1,0 +1,83 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.timeline-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw; /* responsive gap */
+  width: 90%;
+  max-width: 1300px;
+  margin-top: 5vh;
+}
+
+/* Timeline image (centered) */
+.timeline-image {
+  width: 90%;       /* responsive width */
+  max-width: 1300px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 10vh;
+}
+
+/* Profile image (on top center of timeline) */
+.profile-image {
+  position: absolute;
+  transform: translateY(-50%); /* overlap halfway */
+  width: 25vw;                /* responsive width */
+  max-width: 450px;           /* limit max size */
+  height: auto;               /* maintain aspect ratio */
+  border-radius: 30%;
+  object-fit: cover;
+  display: block;
+  left: 50%;
+  transform: translate(-50%, -50%); /* center horizontally + overlap */
+}
+
+/* Footer styling */
+.footer {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.footer .watson {
+  font-weight: bold;
+  color: #0072c6;
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+  .profile-image {
+    width: 30vw;
+    max-width: 350px;
+  }
+
+  .timeline-image {
+    width: 95%;
+  }
+}
+
+/* Responsive for mobiles */
+@media (max-width: 768px) {
+  .profile-image {
+    width: 40vw;
+    max-width: 250px;
+  }
+
+  .timeline-image {
+    width: 100%;
+    margin-top: 8vh;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}

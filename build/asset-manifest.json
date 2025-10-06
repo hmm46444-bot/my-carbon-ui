@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/my-carbon-ui/static/css/main.e41499f3.css",
+    "main.js": "/my-carbon-ui/static/js/main.1200393b.js",
+    "static/media/background.png": "/my-carbon-ui/static/media/background.b942deb88befa1237725.png",
+    "index.html": "/my-carbon-ui/index.html",
+    "main.e41499f3.css.map": "/my-carbon-ui/static/css/main.e41499f3.css.map",
+    "main.1200393b.js.map": "/my-carbon-ui/static/js/main.1200393b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e41499f3.css",
+    "static/js/main.1200393b.js"
+  ]
+}

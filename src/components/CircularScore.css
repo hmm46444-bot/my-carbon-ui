@@ -1,0 +1,24 @@
+.circular-score {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-score svg {
+  transform: rotate(-90deg);
+}
+
+.circular-score-text {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: #24a148;
+}
+
+.circular-score-label {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}

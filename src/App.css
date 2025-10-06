@@ -1,0 +1,224 @@
+/* General Layout */
+/* Global background for all pages */
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  background: url("../public/background.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* UAE Logo */
+.logo {
+  height: 500px;
+  margin-right: 12px;
+}
+
+/* Falcon Logo on Home */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.overlay-image {
+  position: absolute;
+  top: 300px;   /* adjust positioning */
+  left: 50%;
+  transform: translateX(-50%); /* center horizontally */
+  width: 500px;   /* size of the overlay */
+  height: auto;
+}
+.falcon-logo {
+  height: 100px;
+  width: 380px;
+}
+.home-image {
+  max-width: 300px;
+  height: auto;
+}
+.timeline-image {
+  position: relative;
+  width: 1600px;          /* stretch full width of parent */     /* stretch across entire viewport */
+  height: 80vh;         /* take 80% of viewport height */
+  margin-top: 20vh;
+  margin-left: 10vh ;    /* leave 10% at the top */
+  margin-bottom: 8vh;  /* leave 10% at the bottom */
+  object-fit: contain;  /* keep full image without cutting */
+}
+/* Genome Page Layout */
+.genome-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+/* GenomePage.css */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: flex-end; /* right-align all buttons dynamically */
+  margin-top: 50px;
+}
+
+.sidebar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;   /* center icon + text horizontally */
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 19px 23px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #e8e5e5;
+  color: #000;
+  transition: background-color 0.2s;
+
+  width: 300px; /* set a fixed width for all buttons */
+  text-align: center; /* ensure text is centered inside */
+} 
+
+.sidebar-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Push icon to left but still right-align the whole content */
+.sidebar-btn svg {
+  order: -1;         /* move icon before text in flex row */
+  margin-left: 0;    /* reset any auto margin */
+}
+
+/* Highlighted buttons */
+.sidebar-btn.highlight {
+  font-size: 18px;       /* larger font */
+  font-weight: bold;
+}
+
+
+/* Profile Circle */
+.main-profile {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+.circle-container {
+  text-align: center;
+}
+.profile-img {
+  width: 650px;
+  height: 650px;
+  border-radius: 30%;
+  object-fit: cover; /* keep proportions without distortion */
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.profile-info {
+  color: #666;
+}
+/* Add this */
+.main-content {
+  padding-top: 3rem; /* give space for Carbon Header */
+}
+
+/* Score Section */
+.score-section {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.score-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: green;
+}
+.value-score {
+  background: #c89f3d; /* mustard */
+  color: white;
+  border-radius: 50%;
+  padding: 20px 30px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+.assistant-btn {
+  background: #f4f4f4;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.assistant-btn:hover {
+  background: #e0e0e0;
+}
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 14px;
+}
+.watson {
+  font-weight: bold;
+  color: #0f62fe;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active {
+  background-color: #0072c3; /* IBM Blue */
+  color: white;
+}
+
+.ask-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+/* Force Watson Assistant chat container to center bottom */
+#watson-assistant-chat {
+  position: fixed !important;
+  bottom: 20px;              /* distance from bottom */
+  left: 50%;                 /* push to center */
+  transform: translateX(-50%); /* perfectly center horizontally */
+  z-index: 9999;             /* make sure it stays on top */
+  width: 400px;              /* adjust width */
+  max-height: 600px;         /* optional */
+}
